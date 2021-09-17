@@ -1,20 +1,22 @@
-/* STYLING MAIN PAGE*/
 html,
 body {
   height: 100%;
 }
+
 body{
     background: #EAEAEA;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .survey-start{
     position: relative;
     width: 100%;
     height: 100%;
 }
+
 .survey-start--hidden {
     display: none;
 }
+
 .survey-start__content{
     position: absolute;
     left: 50%;
@@ -36,6 +38,7 @@ body{
     width: 100px;
     height: 100px;
 }
+
 .survey-start__button-wrapper{
     width: 280px;
     text-align: center;   
@@ -50,8 +53,140 @@ body{
     border: none;
     background: #EAEAEA;
     transition: 0.3s;
-}
+} 
 .survey-start__button:hover{
     text-shadow: 2px 2px #a19393;
     cursor: pointer;
+}
+
+/* styling form page  */
+.survey-form--hidden {
+    display: none;
+}
+
+.survey-form__container {
+    width: 900px;
+    margin: 80px 200px;
+
+}
+.survey-form__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.survey-form__header{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1.8px solid #232323;
+    padding-bottom: 10px;
+    flex-direction: row;
+
+}
+.survey-form__logo{
+    width: 142px;
+    height: 24px;
+}
+.survey-form__logo img{
+    width: 100%;
+    
+}
+.survey-form__paging span{
+    font-weight: bold;
+    line-height: 35px;
+    text-align: right; 
+    font-size: 35px;
+    color: #232323
+}
+.survey-form__pages{
+    width: 100%;
+}
+.survey-form__page,
+.survey-page__advice{
+    display: flex;
+}
+.survey-page__img {
+    width: 949px;
+    height: 892px;
+}
+.survey-page__img img{
+    width: 100%;
+}
+
+.survey-user__form,
+.survey-page__advice{
+    margin-top:37px;
+}
+.survey-user__form label{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+  
+}
+ input::placeholder{
+    color: black;
+}
+.survey-user__input{
+    width: 513px;
+    height: 47px;
+    border: 0.8px solid #232323;
+    margin-bottom: 40px;
+    margin-top: 3px;
+    font-weight: normal;
+    line-height: 22px;
+    font-size: 18px;
+} 
+.survey-form__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.survey-form__next{
+    height: 20.63px;
+    width: 14px;
+    margin-top: 30px;
+  
+}
+.survey-page__warning{
+    border-top:  0.8px solid #000000;
+    padding-top: 20px;
+    width: 365px;
+}
+.survey-page__warning p {
+    font-family: "BPG Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #626262;
+} 
+
+.survey-form__page--active{
+    display: none;
+}
+
+
+/* styling questionare covid page*/
+.survey-form__question p {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 27px;
+    color: #232323;
+    margin-top: 46px;
+    margin-bottom: 14px;
+    width: 622px;
+}
+.checkinput{
+    width: 513px;
+    height: 50px;
+    margin-bottom: 25px;
+    border: 0.8px solid #232323;
+}
+
+.redberry-advice{
+    width: 606px;
+}
+.redberry-advice p{
+    margin-bottom: 12px;
 }

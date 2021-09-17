@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html
 <html lang="en">
 
 <head>
@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>COVID-19 Vaccionation</title>
 </head>
 
 <body>
+
+
+    <!--START CONTAINER-->
     <div class="survey-start">
 
         <div class="survey-start__content">
             <div class="survey-start__img-wrapper">
-                <img class="survey-start__img" src="/assets/Vector.png" alt="">
+                <img class="survey-start__img" src="./assets/Vector.png" alt="">
             </div>
             <div class="survey-start__button-wrapper">
                 <button class="survey-start__button">კითხვარის დაწყება</button>
@@ -26,15 +29,267 @@
         </div>
 
 
+    </div>
+
+    <!-- Form -->
+    <div class="survey-form survey-form--hidden">
+
+        <div class="survey-form__container">
+
+            <div class="survey-form__header">
+                <div class="survey-form__logo">
+                    <img src="./assets/Group.png" alt="">
+                </div>
+                
+                <div class="survey-form__paging">
+                     <span>1/4</span>
+                </div>
+                
+            </div>
+
+
+            <div class="survey-form__content">
+
+                <div class="survey-form__pages">
+
+                    <div class="survey-form__page survey-form__page--active">
+
+                        <div class="survey-page__user">
+                            <form class="survey-user__form">
+                                <label id="name-label"> სახელი* </label>
+                                <input class="survey-user__input" type="text" name="name" id="name" required placeholder="Enter Your Name"><br>
+                                
+                                <label id="lastname-label"> გვარი* </label>
+                                <input class="survey-user__input" type="text" name="lastname" id="name" required placeholder="Enter Your Name"><br>
+
+                                <label id="email-label"> მეილი* </label>
+                                <input class="survey-user__input" type="email" name="email" id="email" required placeholder="Enter Your Email"><br>
+ 
+                                <div class="survey-page__warning">
+                                    <p>
+                                        *- ით მონიშნული ველების შევსება
+                                        სავალდებულოა
+                                    </p>
+                                </div>
+                        </div>
+                       
+                        <div class="survey-page__img">
+                            <img src="./assets/scan2.png" alt="">
+                        </div>
+
+                    </div> 
+
+
+                    <div class="survey-form__page survey-form__page--active">
+
+                       <div class="survey-page__covid">
+
+                        <form class="survey-form__covid">
+
+                            <div class="survey-form__question">
+                                <p> გაქვს გადატანილი Covid-19? * </p>
+
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes"> კი </label><br>
+                                  <span class="checkmark"></span>
+      
+                                  <input type="radio" class="answer" id="answerNo" name="answer" value="no">
+                                  <label class="survey-answer" for="no"> არა </label><br>
+                                  <span class="checkmark"></span>
+      
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes"> ახლა მაქვს </label><br>
+                                  <span class="checkmark"></span>
+
+                            </div>
+                            
+                            <div class="survey-form__question">
+                                <p> ანტისხეულების ტესტი გაქვს გაკეთებული ? * </p>
+
+                                <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                <label class="survey-answer" for="yes"> კი </label><br>
+                                <span class="checkmark"></span>
+      
+                                <input type="radio" class="answer" id="answerNo" name="answer" value="no">
+                                <label class="survey-answer" for="no"> არა </label><br>
+                                <span class="checkmark"></span>
+
+
+                            </div>
+
+
+                            <div class="survey-form__question">
+                                <p>თუ გახსოვს, გთხოვ მიუთითე ტესტის მიახლოებითი რიცხვი და ანტისხეულების რაოდენობა* </p>
+                                <input type="number" min="1" class="checkinput" placeholder="ანტისხეულების რაოდენობა">
+                                <input placeholder="რიცხვი" class="checkinput"  type="text" class="radios" onfocus="(this.type = 'date')"  id="date">
+                                
+                                <p>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელე) როდის გქონდა Covid-19* </p>
+                                <input placeholder="დდ/თთ/წწ" type="text" class="checkinput" onfocus="(this.type = 'date')"  id="covidDate">
+                                
+
+                            </div>   
+                        </form>  
+
+                       </div>
+
+                            <div class="survey-page__img">
+                                <img src="/assets/vaccinate2.png" alt="vaccinate">
+                           </div>
+
+                    </div> 
+
+
+
+                    <div class="survey-form__page survey-form__page--active">
+                        <form class="survey-form__vaccine">
+                            
+                            <div class="survey-form__question">
+                                <p> უკვე აცრილი ხარ?* </p>
+                                
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes"> კი </label><br>
+                                  <span class="checkmark"></span>
+                                
+                                  <input type="radio" class="answer" id="answerNo" name="answer" value="no">
+                                  <label class="survey-answer" for="no"> არა </label><br>
+                                  <span class="checkmark"></span> 
+                                      
+
+                            </div>
+
+                            <div class="survey-form__question">
+                                <p> რას ელოდები? </p>
+
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">დარეგისტრირებული ვარ და ველოდები რიცხვს</label><br>
+                                  <span class="checkmark"></span>
+      
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">არ ვგეგმავ</label><br>
+                                  <span class="checkmark"></span>  
+                                  
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">გადატანილი მაქვს და ვგეგმავ აცრას</label><br>
+                                  <span class="checkmark"></span>     
+
+                            </div>
+
+                            <div class="survey-form__question">
+                                <p> აირჩიე რა ეტაპზე ხარ* </p>
+
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">პირველი დოზა და დარეგისტრირებული ვარ მეორეზე</label><br>
+                                  <span class="checkmark"></span>
+      
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">სრულად აცრილი ვარ</label><br>
+                                  <span class="checkmark"></span>  
+                                  
+                                  <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                  <label class="survey-answer" for="yes">პირველი დოზა და არ დავრეგისტრირებულვარ მეორეზე </label><br>
+                                  <span class="checkmark"></span>     
+
+                            </div>
+                        </form>
+                            <div class="survey-page__img">
+                                <img src="./assets/doctor2.png" alt="">
+                            </div>
+
+                    </div>
+
+
+                    <div class="surbey-form__page">
+                        <div class="survey-page__advice">
+                            <form class="survey-form__advice">
+                                <div class="redberry-advice">
+                                    <p>რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო, რომელსაც ჩვენი თანამშრომლები ქმნით, ბევრისთვის არის და ყოფილა წლების განმავლობაში მიზნებისთვის ერთად ბრძოლის მიზეზი, ბევრისთვის კი — ჩვენთან გადმოსვლის.</p>
+                                    <p> პანდემიის პერიოდში ერთმანეთსაც იშვიათად ვნახულობთ პირისპირ და ყოველდღიური კომუნიკაციაც გაიშვიათდა.</p>     
+                                </div>
+
+                                <div class="survey-form__question">
+                                    <p>რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები, სადაც ყველა სურვილისამებრ ჩაერთვება?*</p>
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">კვირაში ორჯერ </label><br>
+                                        <span class="checkmark"></span>  
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">კვირაში ერთხელ </label><br>
+                                        <span class="checkmark"></span>
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">ორ კვირაში ერთხელ </label><br>
+                                        <span class="checkmark"></span>
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">თვეში ერთხელ </label><br>
+                                        <span class="checkmark"></span>
+
+                                    <p>კვირაში რამდენი დღე ისურვებდი ოფისიდან მუშაობას?*</p>
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">0 </label><br>
+                                        <span class="checkmark"></span>  
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">1</label><br>
+                                        <span class="checkmark"></span>
     
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">2 </label><br>
+                                        <span class="checkmark"></span>
+    
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">3 </label><br>
+                                        <span class="checkmark"></span>
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">4 </label><br>
+                                        <span class="checkmark"></span>  
+
+                                        <input type="radio" class="answer" id="answerYes" name="answer" value="yes">
+                                        <label class="survey-answer" for="yes">5 </label><br>
+                                        <span class="checkmark"></span>
+
+                                    <p>რას ფიქრობ ფიზიკურ შეკრებებზე?</p>
+                                    <p>რას ფიქრობ არსებულ გარემოზე:რა მოგწონს, რას დაამატებდი, რას შეცვლიდი?</p>
 
 
 
+                                </div>
 
+                            </form>
+
+                            <div class="survey-page__img">
+                                <img src="/assets/bike2 1.png" alt="">
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="survey-finish">
+                            <button>დასრულება</button>
+                        </div>
+
+                    </div>
+    
+                </div>
+            </div>
+
+
+
+            <div class="survey-form__footer">
+                <div class="survey-form__next">
+                    <img src="./assets/Vector 2.png" alt="">
+                </div>
+            </div> 
+        </div>
+
+
+    </div> 
 
 
     <script src="js/script.js"></script>
 
 </body>
 
-</html>
+</html> 
