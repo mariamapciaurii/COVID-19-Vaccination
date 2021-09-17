@@ -1,0 +1,57 @@
+/* STYLING MAIN PAGE*/
+html,
+body {
+  height: 100%;
+}
+body{
+    background: #EAEAEA;
+    font-family: 'Roboto', sans-serif;
+}
+.survey-start{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.survey-start--hidden {
+    display: none;
+}
+.survey-start__content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.survey-start__img-wrapper{
+    width: 455px;
+    height: 278px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.survey-start__img{
+    width: 100px;
+    height: 100px;
+}
+.survey-start__button-wrapper{
+    width: 280px;
+    text-align: center;   
+}
+.survey-start__button{ 
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    text-align: center;
+    text-transform: lowercase;
+    color: #232323;
+    border: none;
+    background: #EAEAEA;
+    transition: 0.3s;
+}
+.survey-start__button:hover{
+    text-shadow: 2px 2px #a19393;
+    cursor: pointer;
+}
